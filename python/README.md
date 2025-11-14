@@ -19,6 +19,29 @@
 
 相关导出定义见 `InfiniCore/python/infinicore/__init__.py`。
 
+## API 索引
+
+- **核心对象**
+  - [`device`](device/README.md)
+  - [`dtype`](dtype/README.md)
+  - [`Tensor`](tensor/README.md)
+  - 构造函数：[`empty`](tensor/README.md#构造函数)、[`zeros`](tensor/README.md#构造函数)、[`ones`](tensor/README.md#构造函数)、[`empty_like`](tensor/README.md#构造函数)、[`from_blob`](tensor/README.md#构造函数)
+  - 常用方法：[`copy_`](tensor/README.md#tensor-类)、[`to`](tensor/README.md#tensor-类)、[`permute`](tensor/README.md#tensor-类)、[`view`](tensor/README.md#tensor-类)、[`debug`](tensor/README.md#tensor-类)
+  - [`use_ntops` 协作说明](#与-ntops-的协作)
+- **顶层算子**
+  - [`add`](ops/add/README.md)
+  - [`matmul`](ops/matmul/README.md)
+  - [`rearrange`](ops/rearrange/README.md)
+  - [`attention`](ops/attention/README.md)
+- **函数式算子**
+  - [`causal_softmax`](nn/functional/causal_softmax/README.md)
+  - [`rms_norm`](nn/functional/rms_norm/README.md)
+  - [`silu`](nn/functional/silu/README.md)
+  - [`swiglu`](nn/functional/swiglu/README.md)
+- **更多参考**
+  - [`infinicore.ops` 索引](ops/README.md)
+  - [`nn` 模块概览](nn/README.md)
+
 ## 张量与构造函数
 
 `Tensor` 是对底层 `_infinicore.Tensor` 的 Python 包装，常用接口包括：
@@ -45,15 +68,11 @@ a.copy_(b)
 
 ## 顶层算子 (`infinicore.*`)
 
-以下函数直接通过 `infinicore` 命名空间导出，全部支持可选的 `out` 关键字参数以复用缓冲区：
-
-详见 [`ops` 文档索引](ops/README.md)。
+详见 [`ops` 文档索引`](ops/README.md) 及各算子文档。
 
 ## 函数式算子 (`infinicore.nn.functional`)
 
-函数式 API 集中在 `infinicore.nn.functional`：
-
-详见 [`nn.functional` 文档](nn/functional/README.md)。
+详见 [`nn.functional` 文档](nn/functional/README.md) 及子目录。
 
 ## 运行时上下文
 
