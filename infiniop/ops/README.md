@@ -1,5 +1,12 @@
 # `InfiniOP` 算子列表
 
+## Elementwise 算子
+
+- [`Binary Elementwise`](/infiniop/ops/binary/README.md) - 双目逐元素算子（Pow, Min, Div, Max 等）
+- [`Unary Elementwise`](/infiniop/ops/unary/README.md) - 单目逐元素算子（Abs, Sqrt, Log, Exp 等）
+
+## 其他算子
+
 - [`Add`](/infiniop/ops/add/README.md)
 - [`Causal Softmax`](/infiniop/ops/causal_softmax/README.md)
 - [`Clip`](/infiniop/ops/clip/README.md)
